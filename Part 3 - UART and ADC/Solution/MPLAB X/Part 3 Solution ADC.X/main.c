@@ -1,5 +1,5 @@
 /*
- * Part 3 Solution for UART
+ * Part 3 Solution for ADC
  * 
  * Description:
  * The AVR is connected to a potentiometer. The potentiometer is connected to
@@ -25,8 +25,10 @@
 
 void cdc_send_char(char c)
 {
+    // Wait for USART1 to be ready for new data
     while (!(USART1.STATUS & USART_DREIF_bm));
     
+    // Give new data to USART 1
     USART1.TXDATAL = c;
 }
 void cdc_send_string(const char* str)
