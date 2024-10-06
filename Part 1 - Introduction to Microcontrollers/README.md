@@ -12,28 +12,28 @@ By cloning the github repository or by manually downloading/copying the contents
 
 #### Microchip Studio
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MicrochipNewProject1.png)  
-  
+<br/><br/>
  1. Start Micrichip Studio
  2. Select File/New/Project
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MicrochipNewProject2.png)  
-  
+<br/><br/>
  4. Select GCC C++ Executable Project
  5. Name the project
  6. Select a location to save the project
  7. Press OK
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MicrochipNewProject3.png)  
-  
+<br/><br/>
  9. Use the search bar in the top right to search for "AVR128DA48"
  10. Select "AVR128DA48"
  11. Press OK
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MicrochipNewProject4.png)  
-  
+<br/><br/>
  13. Create your code
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MicrochipNewProject5.png)  
-  
+<br/><br/>
  15. Press the hammer icon
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MicrochipNewProject6.png)  
-  
+<br/><br/>
  17. First select the embedded debugger for the AVR128DA48 Curiosity Nano development board (1)
  18. Then build the project and program the device without debugging by pressing the green play button (2)
  19. The built-in LED on the development board should now blink!
