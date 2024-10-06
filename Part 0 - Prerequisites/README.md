@@ -1,4 +1,4 @@
-# Pre Requisites
+# Prerequisites
 ### Goals
  - Install needed software
  - Get a basic understanding of electric circuits
@@ -13,3 +13,6 @@ This section will guide the attendee how to install the required programs. Windo
 #### MAC OS/Linux OS PC
  1. [Install MPLAB X](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
  2. [Install Teraterm](https://teratermproject.github.io/index-en.html)
+
+### Basic Electronics
+ 1. Go through the attached presentation
