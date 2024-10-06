@@ -4,7 +4,7 @@
  - Get a basic understanding of electric circuits
 
 ### Installation
-This section will guide the attendee how to install the required programs. Windowns, MAC OS, or Linux is supported, but only on 64 bit Intel or AMD processors
+This section will guide the attendee how to install the required programs. Windowns, MAC OS, or Linux is supported, but only on 64 bit Intel or AMD processors. Your PC must have a USB Type A connector, or a USB Type C to USB Type A converter.
 
 #### Windows PC
  1. [Install Microchip Studio](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio)
