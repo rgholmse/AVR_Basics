@@ -54,7 +54,7 @@ By cloning the github repository or by manually downloading/copying the contents
  7. Press Next
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MPLAB%20NewProject3.png)  
   
- 8. Select compiler (Either XC8 or AVR-GCC)
+ 8. Select compiler (Either XC8 or AVR-GCC). AVR-GCC is preferred if available
  9. Press Next
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MPLAB%20NewProject4.png)  
   
