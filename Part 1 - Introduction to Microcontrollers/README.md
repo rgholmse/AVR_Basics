@@ -8,11 +8,12 @@
  - Blink a LED
 
 ### Solution
-By cloning the github repository or by manually downloading/copying the contents of main.c the solution can be explored. To program the AVR connect the AVR128DA48 Curiosity Nano kit to your computer and use Microchip Studio or MPLAB X to upload the code. 
+By cloning the github repository or by manually downloading/copying the contents of main.c the solution can be explored. To program the AVR connect the AVR128DA48 Curiosity Nano kit to your computer and use Microchip Studio or MPLAB X to upload the code. Alternatively the entire workflow can be seen for both Microchip Studio and MPLAB X in the following sections
+
 #### Microchip Studio
-![MicrochipStudioUpload](https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/MicrochipStudioUpload.png)
- 1. Press the hammer icon to open tool settings
- 2. Select the development board built in debugger (nEDBG)
- 3. Build the project and upload the code without debugging
+!(https://github.com/rgholmse/AVR_Basics/blob/main/Part%201%20-%20Introduction%20to%20Microcontrollers/Pictures/MicrochipNewProject1.png)
+ 1. Start Micrichip Studio
+ 2. Select File/New/Project
+ 3. 
 
 #### MPLAB X
