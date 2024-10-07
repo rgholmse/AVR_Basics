@@ -15,4 +15,4 @@ This section will guide the attendee how to install the required programs. Windo
  2. [Install Teraterm](https://teratermproject.github.io/index-en.html)
 
 ### Basic Electronics
- 1. Go through the attached presentation
+ 1. Go through the [presentation](https://github.com/rgholmse/AVR_Basics/blob/main/Part%200%20-%20Prerequisites/Presentation/Part%200%20-%20Prerequisites.pdf)
