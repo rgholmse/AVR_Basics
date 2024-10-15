@@ -1,11 +1,11 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
-                              C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o (exit)
+                              C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
-                              build/default/production/main.o (__do_copy_data)
+                              main.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(vsprintf.o)
-                              build/default/production/main.o (vsprintf)
+                              main.o (vsprintf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(vfprintf_std.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(vsprintf.o) (vfprintf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strnlen_P.o)
@@ -19,11 +19,11 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 
 Discarded input sections
 
- .data          0x00000000        0x0 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
- .bss           0x00000000        0x0 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
- .text          0x00000000        0x0 build/default/production/main.o
- .data          0x00000000        0x0 build/default/production/main.o
- .bss           0x00000000        0x0 build/default/production/main.o
+ .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
@@ -91,17 +91,18 @@ Linker script and memory map
 
 Address of section .data set to 0x804000
                 0x00008000                __RODATA_PM_OFFSET__ = 0x8000
-LOAD C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
-LOAD build/default/production/main.o
-                0x00000001                __MPLAB_BUILD = 0x1
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+LOAD main.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a
 END GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a
-LOAD C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4\libavr128da48.a
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4\libavr128da48.a
 END GROUP
                 [0x00000000]                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
                 [0x00804000]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x802000
@@ -205,7 +206,7 @@ END GROUP
 
 .text           0x00000000      0x7c0
  *(.vectors)
- .vectors       0x00000000       0xe8 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .vectors       0x00000000       0xe8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
@@ -233,13 +234,13 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000e8        0x0 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .init0         0x000000e8        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
                 0x000000e8                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000e8        0xc C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .init2         0x000000e8        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
  *(.init2)
  *(.init3)
  *(.init3)
@@ -256,10 +257,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000010e        0x8 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .init9         0x0000010e        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
  *(.init9)
  *(.text)
- .text          0x00000116        0x4 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .text          0x00000116        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
                 0x00000116                __vector_38
                 0x00000116                __vector_22
                 0x00000116                __vector_28
@@ -320,17 +321,17 @@ END GROUP
                 0x00000116                __vector_42
                 0x0000011a                . = ALIGN (0x2)
  *(.text.*)
- .text.cdc_send_char
-                0x0000011a       0x10 build/default/production/main.o
-                0x0000011a                cdc_send_char
- .text.cdc_send_string
-                0x0000012a       0x3a build/default/production/main.o
-                0x0000012a                cdc_send_string
- .text.cdc_print
-                0x00000164       0x3c build/default/production/main.o
-                0x00000164                cdc_print
- .text.main     0x000001a0       0x6e build/default/production/main.o
-                0x000001a0                main
+ .text._Z13cdc_send_charc
+                0x0000011a        0xe main.o
+                0x0000011a                _Z13cdc_send_charc
+ .text._Z15cdc_send_stringPKc
+                0x00000128       0x3a main.o
+                0x00000128                _Z15cdc_send_stringPKc
+ .text._Z9cdc_printPKcz
+                0x00000162       0x3c main.o
+                0x00000162                _Z9cdc_printPKcz
+ .text.main     0x0000019e       0x70 main.o
+                0x0000019e                main
  .text.avr-libc
                 0x0000020e       0x46 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(vsprintf.o)
                 0x0000020e                vsprintf
@@ -384,7 +385,7 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00804000       0x12 build/default/production/main.o
+                0x00804000       0x12 main.o
  *(.gnu.linkonce.r*)
                 0x00804012                . = ALIGN (0x2)
                 0x00804012                _edata = .
@@ -445,7 +446,7 @@ END GROUP
 
 .comment        0x00000000       0x5c
  *(.comment)
- .comment       0x00000000       0x30 build/default/production/main.o
+ .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(vsprintf.o)
  .comment       0x00000030       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(vfprintf_std.o)
@@ -455,7 +456,7 @@ END GROUP
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
  .note.gnu.avr.deviceinfo
-                0x00000000       0x40 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+                0x00000000       0x40 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -472,33 +473,42 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges
+.debug_aranges  0x00000000       0x38
  *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x38 main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x3227
+.debug_info     0x00000000     0x3acd
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x3227 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_info    0x00000000     0x3227 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_info    0x00003227      0x8a6 main.o
 
-.debug_abbrev   0x00000000     0x2f80
+.debug_abbrev   0x00000000     0x323a
  *(.debug_abbrev)
- .debug_abbrev  0x00000000     0x2f80 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_abbrev  0x00000000     0x2f80 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_abbrev  0x00002f80      0x2ba main.o
 
-.debug_line     0x00000000      0x1f3
+.debug_line     0x00000000      0x4a1
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x1f3 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_line    0x00000000      0x1f3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_line    0x000001f3      0x2ae main.o
 
-.debug_frame
+.debug_frame    0x00000000       0x84
  *(.debug_frame)
+ .debug_frame   0x00000000       0x84 main.o
 
-.debug_str      0x00000000     0x153f
+.debug_str      0x00000000     0x1cfa
  *(.debug_str)
- .debug_str     0x00000000     0x153f C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_str     0x00000000     0x153f C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/AVR-Dx_DFP/2.5.294/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .debug_str     0x0000153f      0x7bb main.o
+                                0x7fc (size before relaxing)
 
-.debug_loc
+.debug_loc      0x00000000      0x1a0
  *(.debug_loc)
+ .debug_loc     0x00000000      0x1a0 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -518,10 +528,11 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges
+.debug_ranges   0x00000000       0x28
  *(.debug_ranges)
+ .debug_ranges  0x00000000       0x28 main.o
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(dist/default/production/Part_3_Solution_ADC.X.production.elf elf32-avr)
+OUTPUT(Part 3 Solution UART.elf elf32-avr)
 LOAD linker stubs

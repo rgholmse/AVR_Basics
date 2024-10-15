@@ -56,8 +56,8 @@ int main(void) {
     
     // Configure the baud rate of USART1
     USART1.BAUD     = BAUD(9600);
-    
-    // Set the ADC reference to VDD
+	
+	// Set the ADC reference to VDD
 	VREF.ADC0REF	= VREF_REFSEL_VDD_gc;
     
     // Make PC0 an output
@@ -72,13 +72,13 @@ int main(void) {
     // Connect ADC to PD7 (AIN7)
     ADC0.MUXPOS     = ADC_MUXPOS_AIN7_gc;
     
-    // Set the ADC clock divider (Max frequency for ADC is 2 MHz [F_CPU / DIV])
+    // Set the ADC clock divider (Max frequency for ADC is 2 MHz [F_CPU / DIV]) - (optional as DIV2 is default setting)
     ADC0.CTRLC      = ADC_PRESC_DIV2_gc;
     
     // Enable ADC, default config = single ended, 12b mode
     ADC0.CTRLA      = ADC_ENABLE_bm;
     
-    uint16_t adc_result;
+    uint16_t adc_result;	
     
     while (1) 
     {

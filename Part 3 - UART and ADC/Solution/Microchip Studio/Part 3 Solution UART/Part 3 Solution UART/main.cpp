@@ -1,17 +1,16 @@
 /*
- * Part 3 Solution for ADC
+ * Part 3 Solution for UART
  * 
  * Description:
- * The AVR is connected to a potentiometer. The potentiometer is connected to
- * VDD/VTG, GND, and PD7 (AIN7), and is connected to the embedded debugger via
- * PC0 and PC1 (UART). The AVR prints the result of a blocking ADC measurement
- * every 500 ms and prints the result via UART to TeraTerm
+ * The AVR is connected to a personal computer via USB. The embedded debugger of
+ * the AVR128DA48 Curiosity Nano is used to transmit data to the computer via
+ * UART. On the computer TeraTerm is used to monitor the data using a baud rate
+ * of 9600. The AVR counts and prints the count value every 500 ms
  * 
  * Hardware:
  * Pin  Name    Description
  * PC0  TXD     TXD pin for USART1 - Physically connected to embedded debugger
  * PC1  RXD     RXD pin for USART1 - Physically connected to embedded debugger
- * PD7  AIN7    Connected to the potentiometer to measure analog voltage
  */
 
 #define F_CPU 4000000
@@ -21,7 +20,6 @@
 #include <util/delay.h>
 #include <string.h>
 #include <stdio.h>
-
 
 void cdc_send_char(char c)
 {
@@ -57,42 +55,18 @@ int main(void) {
     // Configure the baud rate of USART1
     USART1.BAUD     = BAUD(9600);
     
-    // Set the ADC reference to VDD
-	VREF.ADC0REF	= VREF_REFSEL_VDD_gc;
-    
     // Make PC0 an output
     PORTC.DIRSET    = PIN0_bm;
     
     // Make PC1 an input (optional as it is an input by default)
     PORTC.DIRCLR    = PIN1_bm;
     
-    // Make PD7 input (optional as it is an input by default)
-    PORTD.DIRCLR    = PIN7_bm;
-    
-    // Connect ADC to PD7 (AIN7)
-    ADC0.MUXPOS     = ADC_MUXPOS_AIN7_gc;
-    
-    // Set the ADC clock divider (Max frequency for ADC is 2 MHz [F_CPU / DIV])
-    ADC0.CTRLC      = ADC_PRESC_DIV2_gc;
-    
-    // Enable ADC, default config = single ended, 12b mode
-    ADC0.CTRLA      = ADC_ENABLE_bm;
-    
-    uint16_t adc_result;
+    uint8_t counter = 0;
     
     while (1) 
     {
-        // Start ADC measurement
-        ADC0.COMMAND = ADC_STCONV_bm;
-        
-        // Wait for ADC measurement to be complete (blocking)
-        while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
-        
-        // Store ADC result in a variable
-        adc_result = ADC0.RES;
-        
-        // Print the ADC result
-        cdc_print("ADC Result = %d\r\n", adc_result);
+        // Print and increment counter value
+        cdc_print("Counting %d\r\n", counter++);
         _delay_ms(500);
     }
 }
