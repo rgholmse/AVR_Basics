@@ -1,0 +1,157 @@
+
+SPI Sensor.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00803f00  00803f00  000000ee  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000009a  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000000ee  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000120  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000028  00000000  00000000  0000015c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00001ac2  00000000  00000000  00000184  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000015ea  00000000  00000000  00001c46  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000028b  00000000  00000000  00003230  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000050  00000000  00000000  000034bc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000e46  00000000  00000000  0000350c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000076  00000000  00000000  00004352  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  000043c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	19 c0       	rjmp	.+50     	; 0x34 <__ctors_end>
+   2:	20 c0       	rjmp	.+64     	; 0x44 <__bad_interrupt>
+   4:	1f c0       	rjmp	.+62     	; 0x44 <__bad_interrupt>
+   6:	1e c0       	rjmp	.+60     	; 0x44 <__bad_interrupt>
+   8:	1d c0       	rjmp	.+58     	; 0x44 <__bad_interrupt>
+   a:	1c c0       	rjmp	.+56     	; 0x44 <__bad_interrupt>
+   c:	1b c0       	rjmp	.+54     	; 0x44 <__bad_interrupt>
+   e:	1a c0       	rjmp	.+52     	; 0x44 <__bad_interrupt>
+  10:	19 c0       	rjmp	.+50     	; 0x44 <__bad_interrupt>
+  12:	18 c0       	rjmp	.+48     	; 0x44 <__bad_interrupt>
+  14:	17 c0       	rjmp	.+46     	; 0x44 <__bad_interrupt>
+  16:	16 c0       	rjmp	.+44     	; 0x44 <__bad_interrupt>
+  18:	15 c0       	rjmp	.+42     	; 0x44 <__bad_interrupt>
+  1a:	14 c0       	rjmp	.+40     	; 0x44 <__bad_interrupt>
+  1c:	13 c0       	rjmp	.+38     	; 0x44 <__bad_interrupt>
+  1e:	12 c0       	rjmp	.+36     	; 0x44 <__bad_interrupt>
+  20:	11 c0       	rjmp	.+34     	; 0x44 <__bad_interrupt>
+  22:	10 c0       	rjmp	.+32     	; 0x44 <__bad_interrupt>
+  24:	0f c0       	rjmp	.+30     	; 0x44 <__bad_interrupt>
+  26:	0e c0       	rjmp	.+28     	; 0x44 <__bad_interrupt>
+  28:	0d c0       	rjmp	.+26     	; 0x44 <__bad_interrupt>
+  2a:	21 c0       	rjmp	.+66     	; 0x6e <__vector_21>
+  2c:	0b c0       	rjmp	.+22     	; 0x44 <__bad_interrupt>
+  2e:	0a c0       	rjmp	.+20     	; 0x44 <__bad_interrupt>
+  30:	09 c0       	rjmp	.+18     	; 0x44 <__bad_interrupt>
+  32:	08 c0       	rjmp	.+16     	; 0x44 <__bad_interrupt>
+
+00000034 <__ctors_end>:
+  34:	11 24       	eor	r1, r1
+  36:	1f be       	out	0x3f, r1	; 63
+  38:	cf ef       	ldi	r28, 0xFF	; 255
+  3a:	cd bf       	out	0x3d, r28	; 61
+  3c:	df e3       	ldi	r29, 0x3F	; 63
+  3e:	de bf       	out	0x3e, r29	; 62
+  40:	02 d0       	rcall	.+4      	; 0x46 <main>
+  42:	29 c0       	rjmp	.+82     	; 0x96 <_exit>
+
+00000044 <__bad_interrupt>:
+  44:	dd cf       	rjmp	.-70     	; 0x0 <__vectors>
+
+00000046 <main>:
+
+
+int main(void)
+{
+	// Setup F_CPU to run at 10 MHz -- SPI max CLK frequency is F_CPU / 2 = 5 MHz!
+	CCP = CCP_IOREG_gc;
+  46:	88 ed       	ldi	r24, 0xD8	; 216
+  48:	84 bf       	out	0x34, r24	; 52
+	CLKCTRL.MCLKCTRLB	= CLKCTRL_PDIV_2X_gc	// F_CPU prescaler DIV 2
+						| CLKCTRL_PEN_bm;		// F_CPU prescaler enable
+  4a:	81 e0       	ldi	r24, 0x01	; 1
+  4c:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <__RODATA_PM_OFFSET__+0x7f8061>
+	
+	// Make MISO an output
+	PORTA.DIRSET		= PIN2_bm;
+  50:	e0 e0       	ldi	r30, 0x00	; 0
+  52:	f4 e0       	ldi	r31, 0x04	; 4
+  54:	94 e0       	ldi	r25, 0x04	; 4
+  56:	91 83       	std	Z+1, r25	; 0x01
+	
+	// Disable input buffer so it doesn't affect ADC measurements (optional)
+	PORTB.PIN1CTRL		= PORT_ISC_INPUT_DISABLE_gc;
+  58:	90 93 31 04 	sts	0x0431, r25	; 0x800431 <__RODATA_PM_OFFSET__+0x7f8431>
+	
+	PORTA.PIN4CTRL		= PORT_PULLUPEN_bm;		// Enable internal pull-up on SS pin in case no master is connected
+  5c:	98 e0       	ldi	r25, 0x08	; 8
+  5e:	94 8b       	std	Z+20, r25	; 0x14
+	
+	// Setup SPI
+	SPI0.INTCTRL		= SPI_IE_bm;				// SPI Interrupt Enable (not in buffer mode)
+  60:	e0 e2       	ldi	r30, 0x20	; 32
+  62:	f8 e0       	ldi	r31, 0x08	; 8
+  64:	82 83       	std	Z+2, r24	; 0x02
+	SPI0.CTRLB			= SPI_MODE_0_gc;			// Use SPI mode 0
+  66:	11 82       	std	Z+1, r1	; 0x01
+	SPI0.CTRLA			= SPI_ENABLE_bm;
+  68:	80 83       	st	Z, r24
+	
+	// Enable interrupts
+	sei();
+  6a:	78 94       	sei
+  6c:	ff cf       	rjmp	.-2      	; 0x6c <main+0x26>
+
+0000006e <__vector_21>:
+}
+
+
+
+ISR(SPI0_INT_vect)
+{
+  6e:	1f 92       	push	r1
+  70:	0f 92       	push	r0
+  72:	0f b6       	in	r0, 0x3f	; 63
+  74:	0f 92       	push	r0
+  76:	11 24       	eor	r1, r1
+  78:	8f 93       	push	r24
+  7a:	ef 93       	push	r30
+  7c:	ff 93       	push	r31
+	// Interrupt flag is cleared on ISR completion (unique feature)
+	
+	// Store received data
+	uint8_t spi_data = SPI0.DATA;
+  7e:	e0 e2       	ldi	r30, 0x20	; 32
+  80:	f8 e0       	ldi	r31, 0x08	; 8
+  82:	84 81       	ldd	r24, Z+4	; 0x04
+	// Update transmit data to be received data
+	SPI0.DATA = spi_data;
+  84:	84 83       	std	Z+4, r24	; 0x04
+}
+  86:	ff 91       	pop	r31
+  88:	ef 91       	pop	r30
+  8a:	8f 91       	pop	r24
+  8c:	0f 90       	pop	r0
+  8e:	0f be       	out	0x3f, r0	; 63
+  90:	0f 90       	pop	r0
+  92:	1f 90       	pop	r1
+  94:	18 95       	reti
+
+00000096 <_exit>:
+  96:	f8 94       	cli
+
+00000098 <__stop_program>:
+  98:	ff cf       	rjmp	.-2      	; 0x98 <__stop_program>

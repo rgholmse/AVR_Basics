@@ -1,0 +1,300 @@
+
+Part 6 Solution Motor.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00804000  00804000  00000222  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001ce  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000222  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000254  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000030  00000000  00000000  00000294  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00003fc1  00000000  00000000  000002c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000031c8  00000000  00000000  00004285  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000447  00000000  00000000  0000744d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000044  00000000  00000000  00007894  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00001f5d  00000000  00000000  000078d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000105  00000000  00000000  00009835  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000020  00000000  00000000  0000993a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__ctors_end>
+   4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+   8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+   c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  10:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  14:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  18:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  1c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  20:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  24:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  28:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  2c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  30:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  34:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  38:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  3c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  40:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  44:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  48:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  4c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  50:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  54:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  58:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  5c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  60:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  64:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  68:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  6c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  70:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  74:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  78:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  7c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  80:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  84:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  88:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  8c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  90:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  94:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  98:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  9c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  a0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  a4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  a8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  ac:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  b0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  b4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  b8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  bc:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  c0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  c4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  c8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  cc:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  d0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  d4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  d8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  dc:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  e0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  e4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+
+000000e8 <__ctors_end>:
+  e8:	11 24       	eor	r1, r1
+  ea:	1f be       	out	0x3f, r1	; 63
+  ec:	cf ef       	ldi	r28, 0xFF	; 255
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	df e7       	ldi	r29, 0x7F	; 127
+  f2:	de bf       	out	0x3e, r29	; 62
+  f4:	0e 94 9b 00 	call	0x136	; 0x136 <main>
+  f8:	0c 94 e5 00 	jmp	0x1ca	; 0x1ca <_exit>
+
+000000fc <__bad_interrupt>:
+  fc:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000100 <_Z19motor_direction_seth>:
+#include <avr/io.h>
+#include <util/delay.h>
+
+void motor_direction_set(uint8_t dir)
+{
+	if (dir)
+ 100:	88 23       	and	r24, r24
+ 102:	39 f0       	breq	.+14     	; 0x112 <_Z19motor_direction_seth+0x12>
+	{
+		// Clear first, then set
+		PORTC.OUTCLR = PIN2_bm;
+ 104:	84 e0       	ldi	r24, 0x04	; 4
+ 106:	80 93 46 04 	sts	0x0446, r24	; 0x800446 <__TEXT_REGION_LENGTH__+0x7e0446>
+		PORTA.OUTSET = PIN1_bm;
+ 10a:	82 e0       	ldi	r24, 0x02	; 2
+ 10c:	80 93 05 04 	sts	0x0405, r24	; 0x800405 <__TEXT_REGION_LENGTH__+0x7e0405>
+ 110:	08 95       	ret
+	}
+	else
+	{
+		// Clear first, then set
+		PORTA.OUTCLR = PIN1_bm;
+ 112:	82 e0       	ldi	r24, 0x02	; 2
+ 114:	80 93 06 04 	sts	0x0406, r24	; 0x800406 <__TEXT_REGION_LENGTH__+0x7e0406>
+		PORTC.OUTSET = PIN2_bm;
+ 118:	84 e0       	ldi	r24, 0x04	; 4
+ 11a:	80 93 45 04 	sts	0x0445, r24	; 0x800445 <__TEXT_REGION_LENGTH__+0x7e0445>
+ 11e:	08 95       	ret
+
+00000120 <_Z15motor_speed_setj>:
+}
+
+void motor_speed_set(uint16_t speed)
+{
+	// Guard for invalid speed setting
+	if (speed > 4095)
+ 120:	81 15       	cp	r24, r1
+ 122:	20 e1       	ldi	r18, 0x10	; 16
+ 124:	92 07       	cpc	r25, r18
+ 126:	10 f0       	brcs	.+4      	; 0x12c <_Z15motor_speed_setj+0xc>
+	{
+		speed = 4095;
+ 128:	8f ef       	ldi	r24, 0xFF	; 255
+ 12a:	9f e0       	ldi	r25, 0x0F	; 15
+	}
+	
+	// Update duty cycle
+	TCA0.SINGLE.CMP0BUF = speed;
+ 12c:	80 93 38 0a 	sts	0x0A38, r24	; 0x800a38 <__TEXT_REGION_LENGTH__+0x7e0a38>
+ 130:	90 93 39 0a 	sts	0x0A39, r25	; 0x800a39 <__TEXT_REGION_LENGTH__+0x7e0a39>
+ 134:	08 95       	ret
+
+00000136 <main>:
+
+int main(void)
+{
+	uint8_t motor_dir = 0;
+	uint16_t motor_speed = 2048;
+	motor_direction_set(motor_dir);
+ 136:	80 e0       	ldi	r24, 0x00	; 0
+ 138:	0e 94 80 00 	call	0x100	; 0x100 <_Z19motor_direction_seth>
+	motor_speed_set(motor_speed);
+ 13c:	80 e0       	ldi	r24, 0x00	; 0
+ 13e:	98 e0       	ldi	r25, 0x08	; 8
+ 140:	0e 94 90 00 	call	0x120	; 0x120 <_Z15motor_speed_setj>
+	
+	/*
+		Setup GPIO
+	*/
+	PORTA.DIRSET		= PIN0_bm
+						| PIN1_bm;
+ 144:	83 e0       	ldi	r24, 0x03	; 3
+ 146:	80 93 01 04 	sts	0x0401, r24	; 0x800401 <__TEXT_REGION_LENGTH__+0x7e0401>
+	PORTD.DIRCLR		= PIN7_bm;
+ 14a:	80 e8       	ldi	r24, 0x80	; 128
+ 14c:	80 93 62 04 	sts	0x0462, r24	; 0x800462 <__TEXT_REGION_LENGTH__+0x7e0462>
+	PORTC.DIRSET		= PIN2_bm;
+ 150:	e0 e4       	ldi	r30, 0x40	; 64
+ 152:	f4 e0       	ldi	r31, 0x04	; 4
+ 154:	94 e0       	ldi	r25, 0x04	; 4
+ 156:	91 83       	std	Z+1, r25	; 0x01
+	PORTC.DIRCLR		= PIN7_bm;
+ 158:	82 83       	std	Z+2, r24	; 0x02
+	PORTC.PIN7CTRL		= PORT_PULLUPEN_bm;
+ 15a:	88 e0       	ldi	r24, 0x08	; 8
+ 15c:	87 8b       	std	Z+23, r24	; 0x17
+	
+	/*
+		Setup ADC
+	*/
+	VREF.ADC0REF		= VREF_REFSEL_VDD_gc;
+ 15e:	85 e0       	ldi	r24, 0x05	; 5
+ 160:	80 93 a0 00 	sts	0x00A0, r24	; 0x8000a0 <__TEXT_REGION_LENGTH__+0x7e00a0>
+	
+	ADC0.MUXPOS			= ADC_MUXPOS_AIN7_gc;
+ 164:	e0 e0       	ldi	r30, 0x00	; 0
+ 166:	f6 e0       	ldi	r31, 0x06	; 6
+ 168:	87 e0       	ldi	r24, 0x07	; 7
+ 16a:	80 87       	std	Z+8, r24	; 0x08
+	ADC0.CTRLC			= ADC_PRESC_DIV4_gc;
+ 16c:	81 e0       	ldi	r24, 0x01	; 1
+ 16e:	82 83       	std	Z+2, r24	; 0x02
+	ADC0.CTRLA			= ADC_ENABLE_bm;
+ 170:	80 83       	st	Z, r24
+	
+	/*
+		Setup TCA
+	*/
+	TCA0.SINGLE.CMP0	= 2048;
+ 172:	e0 e0       	ldi	r30, 0x00	; 0
+ 174:	fa e0       	ldi	r31, 0x0A	; 10
+ 176:	20 e0       	ldi	r18, 0x00	; 0
+ 178:	38 e0       	ldi	r19, 0x08	; 8
+ 17a:	20 a7       	std	Z+40, r18	; 0x28
+ 17c:	31 a7       	std	Z+41, r19	; 0x29
+	TCA0.SINGLE.PER		= 4095;
+ 17e:	2f ef       	ldi	r18, 0xFF	; 255
+ 180:	3f e0       	ldi	r19, 0x0F	; 15
+ 182:	26 a3       	std	Z+38, r18	; 0x26
+ 184:	37 a3       	std	Z+39, r19	; 0x27
+	TCA0.SINGLE.CTRLB	= TCA_SINGLE_CMP0EN_bm
+						| TCA_SINGLE_WGMODE_SINGLESLOPE_gc;
+ 186:	93 e1       	ldi	r25, 0x13	; 19
+ 188:	91 83       	std	Z+1, r25	; 0x01
+	TCA0.SINGLE.CTRLA	= TCA_SINGLE_ENABLE_bm;
+ 18a:	80 83       	st	Z, r24
+	TCA0.SINGLE.CMP0BUF = speed;
+}
+
+int main(void)
+{
+	uint8_t motor_dir = 0;
+ 18c:	c0 e0       	ldi	r28, 0x00	; 0
+	TCA0.SINGLE.CTRLA	= TCA_SINGLE_ENABLE_bm;
+	
+    while (1) 
+    {
+		// Check button to see if we need to change direction
+		if (!(PORTC.IN & PIN7_bm))
+ 18e:	80 91 48 04 	lds	r24, 0x0448	; 0x800448 <__TEXT_REGION_LENGTH__+0x7e0448>
+ 192:	88 23       	and	r24, r24
+ 194:	64 f0       	brlt	.+24     	; 0x1ae <main+0x78>
+		{
+			// Invert motor direction
+			motor_dir = !motor_dir;
+ 196:	81 e0       	ldi	r24, 0x01	; 1
+ 198:	c1 11       	cpse	r28, r1
+ 19a:	80 e0       	ldi	r24, 0x00	; 0
+ 19c:	c8 2f       	mov	r28, r24
+			motor_direction_set(motor_dir);
+ 19e:	0e 94 80 00 	call	0x100	; 0x100 <_Z19motor_direction_seth>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1a2:	8f e4       	ldi	r24, 0x4F	; 79
+ 1a4:	93 ec       	ldi	r25, 0xC3	; 195
+ 1a6:	01 97       	sbiw	r24, 0x01	; 1
+ 1a8:	f1 f7       	brne	.-4      	; 0x1a6 <main+0x70>
+ 1aa:	00 c0       	rjmp	.+0      	; 0x1ac <main+0x76>
+ 1ac:	00 00       	nop
+			// Simple button debounce
+			_delay_ms(50);
+		}
+		
+		// Measure potentiometer value and update motor speed
+		ADC0.COMMAND = ADC_STCONV_bm;
+ 1ae:	81 e0       	ldi	r24, 0x01	; 1
+ 1b0:	80 93 0a 06 	sts	0x060A, r24	; 0x80060a <__TEXT_REGION_LENGTH__+0x7e060a>
+		while(!(ADC0.INTFLAGS & ADC_RESRDY_bm));
+ 1b4:	80 91 0d 06 	lds	r24, 0x060D	; 0x80060d <__TEXT_REGION_LENGTH__+0x7e060d>
+ 1b8:	80 ff       	sbrs	r24, 0
+ 1ba:	fc cf       	rjmp	.-8      	; 0x1b4 <main+0x7e>
+		motor_speed = ADC0.RES;
+ 1bc:	80 91 10 06 	lds	r24, 0x0610	; 0x800610 <__TEXT_REGION_LENGTH__+0x7e0610>
+ 1c0:	90 91 11 06 	lds	r25, 0x0611	; 0x800611 <__TEXT_REGION_LENGTH__+0x7e0611>
+		
+		motor_speed_set(motor_speed);
+ 1c4:	0e 94 90 00 	call	0x120	; 0x120 <_Z15motor_speed_setj>
+	TCA0.SINGLE.PER		= 4095;
+	TCA0.SINGLE.CTRLB	= TCA_SINGLE_CMP0EN_bm
+						| TCA_SINGLE_WGMODE_SINGLESLOPE_gc;
+	TCA0.SINGLE.CTRLA	= TCA_SINGLE_ENABLE_bm;
+	
+    while (1) 
+ 1c8:	e2 cf       	rjmp	.-60     	; 0x18e <main+0x58>
+
+000001ca <_exit>:
+ 1ca:	f8 94       	cli
+
+000001cc <__stop_program>:
+ 1cc:	ff cf       	rjmp	.-2      	; 0x1cc <__stop_program>
