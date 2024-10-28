@@ -22,9 +22,6 @@
   C) Print as float
 
 ### Printf with floating point (MPLAB X)
- 1. XC8
-  1. Already inclduded and optimized. No need to do anything
- 3. AVR GCC
-  1. Enable vprintf library in Properties/Linker
-  2. Printing floats should now work
+ 1. XC8 - Already inclduded and optimized. No need to do anything
+ 2. AVR GCC - Enable vprintf library in Properties/Linker - Printing floats should now work
 
