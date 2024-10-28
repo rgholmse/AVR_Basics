@@ -20,6 +20,7 @@
 #include <util/delay.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdarg.h> // Variadic
 
 void cdc_send_char(char c)
 {
