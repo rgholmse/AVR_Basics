@@ -8,7 +8,7 @@
 ### Resources
  - [MCP9700 Datasheet](https://no.mouser.com/datasheet/2/268/MCP970X_Family_Data_Sheet_DS20001942-3443103.pdf)
 
-### Printf with floating point
+### Printf with floating point (Microchip Studio)
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%205%20-%20Sensors%20and%20SPI/Pictures/printf1.png)
  1. Open Toolchain
 ![Error](https://github.com/rgholmse/AVR_Basics/blob/main/Part%205%20-%20Sensors%20and%20SPI/Pictures/printf2.png)
@@ -20,3 +20,11 @@
   A) Size of integer
   B) Number of deicmals
   C) Print as float
+
+### Printf with floating point (MPLAB X)
+ 1. XC8
+  1. Already inclduded and optimized. No need to do anything
+ 3. AVR GCC
+  1. Enable vprintf library in Properties/Linker
+  2. Printing floats should now work
+
